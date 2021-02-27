@@ -2,7 +2,7 @@ public class Registration{
 
     String firstName;
      String lastName;
-     String DOB;
+     int age;
      String password;
      String emailId;
      Long phoneNo;
@@ -21,11 +21,11 @@ public class Registration{
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public String getDate() {
-        return DOB;
+    public int getDate() {
+        return age;
     }
-    public void setDate(String DOB) {
-        this.DOB = DOB;
+    public void setDate(int age) {
+        this.age = age;
     }
     
     public String getEmailId() {
@@ -61,7 +61,7 @@ public class Registration{
     }
     @Override
     public String toString() {
-        return "Register [\n firstName=" + firstName + "\n lastName=" + lastName + "\n DateOfBirth=" + DOB + "\n password=" +
+        return "Register [\n firstName=" + firstName + "\n lastName=" + lastName + "\n Age=" + age + "\n password=" +
             password + "\n emailId=" + emailId + "\n phoneNo=" + phoneNo + "\n Gender=" +gender +"\n Address=" +address+"]";
     }
 }

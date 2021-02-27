@@ -13,8 +13,8 @@ public class Login {
             reg.setLastName(lastName);
 
             System.out.print(" Enter DateOfBirth => ");
-            String DOB = scan.nextLine();
-            reg.setDate(DOB);
+            int age = scan.nextInt();
+            reg.setDate(age);
 
            System.out.print(" Enter emailId => ");
            String emailId = scan.nextLine();
