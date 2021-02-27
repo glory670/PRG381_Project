@@ -1,4 +1,6 @@
 //import java.util.Scanner;
+package DataAccessLayer;
+
 class EventDetails
 {
     private int bookingnr;
