@@ -1,4 +1,5 @@
- import java.util.*;
+package BusinessLogicLayer;
+import java.util.*;
 public class Login {
     static Registration reg = new Registration();
 

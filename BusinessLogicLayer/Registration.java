@@ -1,3 +1,4 @@
+package BusinessLogicLayer;
 public class Registration{
 
     String firstName;
