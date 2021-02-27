@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 class EventDetails
 {
     private int bookingnr;
@@ -29,7 +29,7 @@ public String geteventtype()
 {
      return eventype;
 }
-public void seteventtype(string eventype)
+public void seteventtype(String eventype)
 {
     this.eventype=eventype;
 }
