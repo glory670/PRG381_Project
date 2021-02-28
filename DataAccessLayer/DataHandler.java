@@ -153,7 +153,49 @@ public class DataHandler {
         
     }
     public void verifyEmployeeLogin(String name, String surname, String password){
+        boolean accepted = false;
+        while (accepted = false){
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Enter Name => ");
+            name = scan.nextLine();
 
+            System.out.print("Enter Surname => ");
+            surname = scan.nextLine();
+
+            System.out.print(" Enter Password => ");
+            password = scan.nextLine();
+
+            scan.close();
+
+            boolean found = false;
+
+            int tempempID =0;
+            String tempname="";
+            String tempsurname="";
+            String tempPassword = "";
+
+            try {
+                x = new Scanner(new File(filepath));
+                x.useDelimiter("[,\n]");
+                while(x.hasNext()&& !found){
+                    tempempID = Integer.parseInt(x.next());
+                    tempname = x.next();
+                    tempsurname = x.next();
+                    tempPassword = x.next();
+
+                    if(tempname.trim().equals(name.trim()) && tempsurname.trim().equals(surname.trim()) && tempPassword.trim().equals(password)){
+                        found = true;
+                        accepted = true;
+                    }
+                }
+                x.close();
+                System.out.println("User is Found: Welcome "+ tempname +" "+tempsurname);
+                
+            } catch (Exception e) {
+                //TODO: handle exception
+                System.out.println("Error:User not Found");
+            }
+        }
     }
 
 }
