@@ -63,6 +63,9 @@ public class Clients {
             this.email = email;
             this.password = password;
         }
+        public String toString() {
+            return clientID + "," + firstName + "," + lastName + "," + age + "," + phoneNo + "," + email + "," + password;
+        }
 
 }
     

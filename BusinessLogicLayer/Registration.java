@@ -65,4 +65,5 @@ public class Registration{
         return "Register [\n firstName=" + firstName + "\n lastName=" + lastName + "\n Age=" + age + "\n password=" +
             password + "\n emailId=" + emailId + "\n phoneNo=" + phoneNo + "\n Gender=" +gender +"\n Address=" +address+"]";
     }
+   
 }
