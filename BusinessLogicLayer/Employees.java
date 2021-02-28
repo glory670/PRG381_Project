@@ -1,9 +1,17 @@
 package BusinessLogicLayer;
 
 public class Employees {
+    int employeeID;
     String empfirstname;
     String emplastname;
     String emppassword;
+
+    public int getEmployeeID(){
+        return employeeID;
+    }
+    public void setEmployeeID(int employeeID){
+        this.employeeID = employeeID;
+    }
 
     public String getFirstname(){
         return empfirstname;
@@ -26,7 +34,8 @@ public class Employees {
     
     public Employees(){}
 
-    public Employees(String empfirstname, String emplastname, String emppassword){
+    public Employees(int employeeID, String empfirstname, String emplastname, String emppassword){
+        this.employeeID = employeeID;
         this.empfirstname = empfirstname;
         this.emplastname = emplastname;
         this.emppassword = emppassword;

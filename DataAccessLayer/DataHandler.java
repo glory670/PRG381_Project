@@ -65,23 +65,10 @@ public class DataHandler {
            pw.println(client.toString());
            pw.close();
 
-           //System.out.println(client.toString());
         }
-
-        //Scanner scanner = new Scanner(System.in); 
-        //System.out.print(" Enter Email Address => ");
-        //String emailId = scanner.nextLine();
-
-        //System.out.print(" Enter password => ");
-        //String password = scanner.nextLine();
-
-        //if ("glory".equals(emailId) && "password".equals(password)) {
-            //System.out.println(" User successfully logged-in.. ");
-        //} else {
-            //System.out.println(" In valid userName of password ");
-        //}
-        //scanner.close();
     }
+    
+
     public static Scanner x;
     public void verifyClientLogin(String email,String password){
         boolean accepted = false;
@@ -130,6 +117,9 @@ public class DataHandler {
             }
         }
         
+    }
+    public void verifyEmployeeLogin(String name, String surname, String password){
+
     }
 
 }
