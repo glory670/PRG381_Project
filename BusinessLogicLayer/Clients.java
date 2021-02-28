@@ -1,7 +1,8 @@
-package DataAccessLayer;
+package BusinessLogicLayer;
 
 
 public class Clients {
+        int clientID;
         String firstname;
         String lastname;
         String email;
@@ -45,9 +46,16 @@ public class Clients {
         public void setAge(int age){
             this.age = age;
         }
+        public int getClientID(){
+            return clientID;
+        }
+        public void setClientID(int clientID){
+            this.clientID = clientID;
+        }
         public Clients(){}
 
-        public Clients(String firstname, String lastname, int age, String phoneNo, String email, String password){
+        public Clients(int clientID, String firstname, String lastname, int age, String phoneNo, String email, String password){
+            this.clientID = clientID;
             this.firstname = firstname;
             this.lastname = lastname;
             this.age = age;

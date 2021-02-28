@@ -1,5 +1,5 @@
 //import java.util.Scanner;
-package DataAccessLayer;
+package BusinessLogicLayer;
 class EventDetails
 {
     private int bookingnr;

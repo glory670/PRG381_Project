@@ -1,0 +1,4 @@
+100,John,Smith,32,0833234433,J.Smith@gmail.com,JSmi123
+101,Sarah,Msindo,28,0612345678,S.Msindo@yahoo.com,SMsi123
+102,Jacob,Murfy,43,0814389098,J.Murfy@gmail.com,JMur123
+103,Tim,Muller,34,0723378987,T.Muller@gmail.com,TMul123

@@ -1,4 +1,4 @@
-package DataAccessLayer;
+package BusinessLogicLayer;
 
 public class Employees {
     String empfirstname;

@@ -38,9 +38,9 @@ public class Login {
            reg.setAddress(address);
 
            System.out.println(reg.toString());
-    }
+        }
 
-    Scanner scanner = new Scanner(System.in); 
+        Scanner scanner = new Scanner(System.in); 
         System.out.print(" Enter Email Address => ");
         String emailId = scanner.nextLine();
 
