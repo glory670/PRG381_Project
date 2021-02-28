@@ -69,7 +69,7 @@ public class DataHandler {
     }
     Employees employee = new Employees();
 
-    public void addEmployee() throws IOException {
+    public void AddEmployee() throws IOException {
         File file = new File("C:\\Users\\Aura\\Desktop\\PRG381 Project\\Employees.txt");
         FileWriter fw = new FileWriter(file);
         PrintWriter pw = new PrintWriter(fw);
@@ -104,9 +104,9 @@ public class DataHandler {
     }
 
     public static Scanner x;
-    public void verifyClientLogin(String email,String password){
+    public void VerifyClientLogin(String email,String password){
         boolean accepted = false;
-        while (!accepted){
+        while (accepted = false){
             Scanner scan = new Scanner(System.in);
             System.out.print("Enter email => ");
             email = scan.nextLine();
@@ -152,7 +152,7 @@ public class DataHandler {
         }
         
     }
-    public void verifyEmployeeLogin(String name, String surname, String password){
+    public void VerifyEmployeeLogin(String name, String surname, String password){
         boolean accepted = false;
         while (accepted = false){
             Scanner scan = new Scanner(System.in);
