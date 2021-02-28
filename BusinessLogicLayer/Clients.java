@@ -1,7 +1,12 @@
 package BusinessLogicLayer;
 
+import java.io.FileNotFoundException;
+import java.util.List;
 
-public class Clients {
+import DataAccessLayer.*;
+
+
+    public class Clients {
         int clientID;
         String firstname;
         String lastname;
@@ -62,6 +67,16 @@ public class Clients {
             this.phoneNo = phoneNo;
             this.email = email;
             this.password = password;
+        }
+        public List<Clients> ClientsData( ) throws FileNotFoundException{
+            DataHandler dh = new DataHandler();
+            List<Clients> clist = dh.GetClients();
+            if(!clist.isEmpty()){
+                return clist;
+            }
+            else{
+                return null;
+            }
         }
         public String toString() {
             return clientID + "," + firstname + "," + lastname + "," + age + "," + phoneNo + "," + email + "," + password;
