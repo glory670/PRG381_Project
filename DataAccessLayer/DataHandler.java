@@ -67,7 +67,41 @@ public class DataHandler {
 
         }
     }
-    
+    Employees employee = new Employees();
+
+    public void addEmployee() throws IOException {
+        File file = new File("C:\\Users\\Aura\\Desktop\\PRG381 Project\\Employees.txt");
+        FileWriter fw = new FileWriter(file);
+        PrintWriter pw = new PrintWriter(fw);
+        try (Scanner scan = new Scanner(System.in)) {
+            if(file.exists()){
+                FileReader fr = new FileReader(file);
+                LineNumberReader lr = new LineNumberReader(fr);
+                int linecount = 0;
+                while(lr.readLine()!=null){
+                    linecount++;
+                }
+                employee.setEmployeeID(linecount+1);
+                lr.close();
+            }
+
+            System.out.print(" Enter firstName => ");
+            String firstName = scan.nextLine();
+            employee.setFirstname(firstName);
+
+            System.out.print(" Enter lastName => ");
+            String lastName = scan.nextLine();
+            employee.setLastname(lastName);
+
+           System.out.print(" Enter your password => ");
+           String password = scan.nextLine();
+           employee.setPassword(password);
+
+           pw.println(employee.toString());
+           pw.close();
+
+        }
+    }
 
     public static Scanner x;
     public void verifyClientLogin(String email,String password){
@@ -83,7 +117,7 @@ public class DataHandler {
             scan.close();
 
             boolean found = false;
-            String tempclientID ="";
+            int tempclientID =0;
             String tempname="";
             String tempsurname="";
             int tempage = 0;
@@ -95,7 +129,7 @@ public class DataHandler {
                 x = new Scanner(new File(filepath));
                 x.useDelimiter("[,\n]");
                 while(x.hasNext()&& !found){
-                    tempclientID = x.next();
+                    tempclientID = Integer.parseInt(x.next());
                     tempname = x.next();
                     tempsurname = x.next();
                     tempage = Integer.parseInt(x.next());
