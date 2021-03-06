@@ -1,0 +1,47 @@
+public class FoodSelection{
+String filepathDeco = "C:\\Users\\Aura\\Desktop\\PRG381 Project\\foodselection.txt";
+public List<FoodSelection> getFoodSelection() throws FileNotFoundException{
+    List<FoodSelection>fList = new ArrayList<FoodSelection>();
+    File file = new File(filepathfood);
+    Scanner sc = new Scanner(file);
+    while(sc.hasNextLine()){
+        String[] line = sc.nextLine().split(",");
+        dList.add(new FoodSelection(Integer.parseInt(line[0]), line[1], line[2]));
+
+    }
+    sc.close();
+    return fList;
+}
+public void AddFoodSelection() throws IOException {
+    File file = new File("C:\\Users\\Aura\\Desktop\\PRG381 Project\\foodselection.txt");
+    FileWriter fw = new FileWriter(file,true);
+    PrintWriter pw = new PrintWriter(fw);
+    try (Scanner scan = new Scanner(System.in)) {
+        if(file.exists()){
+            FileReader fr = new FileReader(file);
+            LineNumberReader lr = new LineNumberReader(fr);
+            int linecount = 0;
+            while(lr.readLine()!=null){
+                linecount++;
+            }
+            FoodSelection.(linecount + 1);
+            lr.close();
+        }
+
+        System.out.print(" Enter starter food ID");
+        int foodId = scan.nextInt();
+        FoodSelection.setfoodId (foodId );
+
+        System.out.print(" Enter the course");
+        int Course = scan.nextInt();
+        FoodSelection.setCourse(Course);
+
+        System.out.print(" Enter type of food");
+        String FoodDescription = scan.nextLine();
+        FoodSelection.setFoodDescription(FoodDescription);
+
+       pw.println(address.toString());
+       pw.close();
+    
+}
+}
